@@ -1,5 +1,6 @@
 package com.northwind;
 
+import com.northwind.data.CustomerDAO;
 import org.apache.commons.dbcp2.BasicDataSource;
 
 import javax.sql.DataSource;
@@ -15,6 +16,8 @@ public class Program {
         dataSource.setUsername(username);
         dataSource.setPassword(password);
 
+
+        CustomerDAO customerDAO = new CustomerDAO(dataSource)
 
 
         System.out.println(username + " " + password);
